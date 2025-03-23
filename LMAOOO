@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jotform Agent Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            window.AgentInitializer.init({
+                rootId: "JotformAgent-0195c38beb7f7814970f86671f1c87c97254",
+                formID: "0195c38beb7f7814970f86671f1c87c97254",
+                queryParams: ["skipWelcome=1", "maximizable=1"],
+                domain: "https://www.jotform.com",
+                isInitialOpen: false,
+                isDraggable: false,
+                background: "linear-gradient(180deg, #C8CEED 0%, #C8CEED 100%)",
+                buttonBackgroundColor: "#0a1551",
+                buttonIconColor: "#fff",
+                variant: false,
+                customizations: {
+                    greeting: "Yes",
+                    greetingMessage: "ugh what do you want gang",
+                    pulse: "Yes",
+                    position: "right"
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p>This is an example website that embeds a Jotform agent. The agent will appear as a chat widget on the right side of the screen.</p>
+        <p>Feel free to interact with the agent to see how it works!</p>
+    </div>
+</body>
+</html>
